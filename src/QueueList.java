@@ -14,38 +14,50 @@ public class QueueList
     public void addNode(int addData)
     {
         //Populating the list.
+        //This is the new Node.
         Node temp = new Node(addData, tail);
 
-        if (head == null) {
+        //If a "Head" did not exist– because there was no Node–
+        //then the new Node becomes the Head.
+        if (head == null)
+        {
             head = temp;
         }
-        else {
+        else
+        {
+            //Creates an index.
             Node current = head;
 
+            //Runs through the list until the tail.
             while (current.linkNext != null)
             {
                 current = current.getNextLink();
             }
 
+            //Once reaching the tail, it is linked next to the new Node.
             current.linkNext = temp;
+            //The new Node is linked previously to the tail.
             temp.linkPrevious = current;
         }
     }
 
     public void deleteNode()
     {
+        //If there is no Head, there is nothing to be deleted.
         if (head == null)
         {
             System.out.println(" ");
         }
         else
         {
+            //The next Node in line becomes the new Head.
             head = head.getNextLink();
         }
     }
 
     public int amountOfNodes()
     {
+        //Traverses through the list, starting with the Head.
         int count = 0;
         Node position = head;
         while (position != null)
@@ -58,6 +70,7 @@ public class QueueList
 
     public void printList()
     {
+        //Traverses the list, printing out the data.
         Node current = head;
 
         while (current != null)
@@ -72,7 +85,7 @@ public class QueueList
     {
         //Instance Variables
         private int data; //What is Stored.
-        private Node linkPrevious;
+        private Node linkPrevious; //To figure out what the Head is, there needs to be two links.
         private Node linkNext; //Instance of Self-Referencing Class.
 
         //Constructors
@@ -84,21 +97,25 @@ public class QueueList
         }
 
         //Getters and Setters
-        public int getData() {
+        public int getData()
+        {
             return data;
         }
 
-        public Node getPreviousLink() {
+        public Node getPreviousLink()
+        {
             return linkPrevious;
         }
 
-        public Node getNextLink() {
+        public Node getNextLink()
+        {
             return linkNext;
         }
 
         //toString
         @Override
-        public String toString() {
+        public String toString()
+        {
             return "Node {" +
                     "Data = " + data +
                     ", Previous Link = " + linkPrevious +
