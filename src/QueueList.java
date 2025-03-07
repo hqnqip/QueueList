@@ -50,7 +50,9 @@ public class QueueList
         }
         else
         {
+            System.out.println("A Node is deleted.");
             //The next Node in line becomes the new Head.
+            //The first Node in line is deleted.
             head = head.getNextLink();
         }
     }
@@ -71,6 +73,7 @@ public class QueueList
     public void printList()
     {
         //Traverses the list, printing out the data.
+        System.out.println("Printing current list...");
         Node current = head;
 
         while (current != null)
