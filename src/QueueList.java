@@ -46,7 +46,7 @@ public class QueueList
         //If there is no Head, there is nothing to be deleted.
         if (head == null)
         {
-            System.out.println(" ");
+            System.out.println("Whoops! You already deleted them all!");
         }
         else
         {

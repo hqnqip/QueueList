@@ -35,7 +35,12 @@ public class Main
 
         a.printList();
 
-        a.addNode(1.0); //Does not take decimals.
+        //a.addNode(1.0); //Does not take decimals.
+
+        a.deleteNode();
+        a.deleteNode();
+        a.deleteNode();
+        a.deleteNode();
 
     }
 }
