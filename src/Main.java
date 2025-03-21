@@ -47,12 +47,9 @@ public class Main
         a.deleteNode();
         a.deleteNode();
 
-        for (int i = 0; i < 50; i++)
-        {
-            a.addNode(i);
-        }
-
         a.printList();
+
+        //System.out.println((a.head).getData()); //Does not work, because the Node's data is private.
 
         System.out.println("There are " + a.amountOfNodes() + " Nodes in the QueueList.");
 

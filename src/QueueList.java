@@ -44,12 +44,9 @@ public class QueueList
     public void deleteNode()
     {
         //If there is no Head, there is nothing to be deleted.
-        if (head == null)
-        {
+        if (head == null) {
             System.out.println("Whoops! You already deleted them all!");
-        }
-        else
-        {
+        } else {
             System.out.println("A Node is deleted.");
             //The next Node in line becomes the new Head.
             //The first Node in line is deleted.
@@ -68,6 +65,11 @@ public class QueueList
             position = position.getNextLink();
         }
         return count;
+    }
+
+    public Node getHead()
+    {
+        return head;
     }
 
     public void printList()
