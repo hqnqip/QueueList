@@ -48,7 +48,7 @@ public class Main
         a.deleteNode();
 
         a.printList();
-        //System.out.println(a.getHead()); //Does not work, because the Node's data is private.
+        //System.out.println(a.getHead()); //Does not work, because there are no Nodes existing.
 
         a.addNode(100);
         System.out.println(a.getHead());
