@@ -72,6 +72,11 @@ public class QueueList
         return head;
     }
 
+    public int getHeadData()
+    {
+        return head.data;
+    }
+
     public void printList()
     {
         //Traverses the list, printing out the data.

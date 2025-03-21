@@ -48,8 +48,11 @@ public class Main
         a.deleteNode();
 
         a.printList();
+        //System.out.println(a.getHead()); //Does not work, because the Node's data is private.
 
-        //System.out.println((a.head).getData()); //Does not work, because the Node's data is private.
+        a.addNode(100);
+        System.out.println(a.getHead());
+        System.out.println(a.getHeadData());
 
         System.out.println("There are " + a.amountOfNodes() + " Nodes in the QueueList.");
 
