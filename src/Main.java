@@ -4,6 +4,7 @@ public class Main
     {
         QueueList a = new QueueList();
 
+        //Testing addNode().
         a.addNode(1);
         a.addNode(2);
         a.addNode(3);
@@ -11,6 +12,7 @@ public class Main
 
         a.printList();
 
+        //Testing the queue functionality. FIFO.
         a.deleteNode(); //Deletes 1.
         a.deleteNode(); //Deletes 2.
 
@@ -18,7 +20,7 @@ public class Main
 
         a.printList();
 
-        //a.addNode("a"); //Results in an error.
+        //a.addNode("a"); //Does not take characters.
 
         a.addNode(1);
         a.addNode(2);
@@ -27,6 +29,7 @@ public class Main
 
         a.printList();
 
+        //Testing the queue functionality. FIFO.
         a.deleteNode();
         a.addNode(5);
         a.deleteNode();
@@ -37,10 +40,21 @@ public class Main
 
         //a.addNode(1.0); //Does not take decimals.
 
+        //Testing deleteNode() on an empty list.
         a.deleteNode();
         a.deleteNode();
         a.deleteNode();
         a.deleteNode();
+        a.deleteNode();
+
+        for (int i = 0; i < 50; i++)
+        {
+            a.addNode(i);
+        }
+
+        a.printList();
+
+        System.out.println("There are " + a.amountOfNodes() + " Nodes in the QueueList.");
 
     }
 }
