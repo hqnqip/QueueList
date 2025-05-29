@@ -14,3 +14,5 @@ Hold Data • Getter/Setter • Output Data
 
 ### Credits / Sources
 Developed through IntelliJ (Java).
+
+This is a solo project created by Hannah Pham.
